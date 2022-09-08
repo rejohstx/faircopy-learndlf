@@ -1,0 +1,15 @@
+{
+  "name": "archivengine-test",
+  "version": "0.1.0",
+  "description": "Package for building and running website.s",
+  "author": "NCL",
+  "license": "MIT",
+  "devDependencies": {},
+  "scripts": {
+    "start": "hugo server -D",
+    "build": "node scripts/whale.js && hugo"
+  },
+  "dependencies": {
+    "jsdom": "^16.2.2"
+  }
+}
