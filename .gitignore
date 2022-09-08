@@ -1,6 +1,6 @@
 node_modules
 .DS_Store
-content/en/texts/*.html
+content/en/texts/**
 .netlify
 public
 .env

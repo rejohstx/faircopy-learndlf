@@ -1,16 +1,3 @@
-
-function renderTOC(toc) {
-    const listItems = []
-    for( const entry of toc ) {
-        const {path, title} = entry
-        listItems.push(
-            `<li><a href="/${path}">${title}</a></li>`
-        )
-    }
-
-    return `<ul>${listItems.join('\n')}</ul>`
-}
-
 const pageTemplate = function renderPage(title,content) {
     return `---
 title: "${title}"

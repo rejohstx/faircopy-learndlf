@@ -6,6 +6,7 @@ const { JSDOM } = jsdom
 
 const {CETEI} = require("./CETEI")
 const { pageTemplate } = require("./page-template")
+const { headerTemplate } = require("./header-template")
 
 function dirExists( dir ) {
     if( !fs.existsSync(dir) ) {
@@ -33,24 +34,53 @@ function convertToHTML( sourcePath ) {
     return null
 }
 
-function mirrorDirs(sourcePath, targetPath) {
-    const dirContents = fs.readdirSync(sourcePath, {withFileTypes: true});
+function clearDir(targetPath) {
+    const dirContents = fs.readdirSync(targetPath, {withFileTypes: true});
     for( let i=0; i < dirContents.length; i++ ) {
-        const sourceDirEnt = dirContents[i];
-        const sourceFile = `${sourcePath}/${sourceDirEnt.name}`
-        const targetFile = `${targetPath}/${sourceDirEnt.name}`
-        if( sourceDirEnt.isDirectory() ) {
-            if( !fs.existsSync(targetFile)) fs.mkdirSync(targetFile)
-            mirrorDirs(sourceFile, targetFile)
+        const targetDirEnt = dirContents[i];
+        const targetFile = `${targetPath}/${targetDirEnt.name}`
+        if( targetDirEnt.isDirectory() ) {
+            clearDir(targetFile)
+            fs.rmdirSync(targetFile)
         } else {
-            if( fs.existsSync(targetFile)) fs.unlinkSync(targetFile)
+            fs.unlinkSync(targetFile)
         } 
     }
 }
 
-async function processDocs(sourceDocsPath, targetPath) {
-    // clear out target and match directory structure with source
-    mirrorDirs(sourceDocsPath, targetPath)
+function renderText(id, name, localID, targetPath) {
+    const sourceFile = `resources/${id}`
+    const content = convertToHTML(sourceFile)
+    const html = pageTemplate(name,content)
+    const targetFile = `${targetPath}/${localID}.html`
+    fs.writeFileSync(targetFile, html, "utf8")        
+}
+
+function renderHeader(parentName, targetPath) {
+    const markdown = headerTemplate(parentName)
+    const targetFile = `${targetPath}/_index.md`
+    fs.writeFileSync(targetFile, markdown, "utf8")        
+}
+
+function renderTEIDoc(parentID, parentName, parentLocalID, resources, targetPath) {
+
+    const teiDocPath = `${targetPath}/${parentLocalID}`
+    dirExists(teiDocPath)
+
+    // first render the top level page
+    renderHeader(parentName,teiDocPath)
+
+    // then render the children
+    for( const resource of resources ) {
+        const { resource_guid: id, name, local_id: localID, resource_type: resourceType, parent_guid: parentResource } = resource
+        if( parentResource === parentID && resourceType === 'text' ) {
+            renderText(id, name, localID, teiDocPath)
+        }
+    }
+}
+
+async function processDocs(targetPath) {
+    clearDir(targetPath)
 
     // generate list of sourceFiles
     const resourceMapJSON = fs.readFileSync('resources/resource_map.json', 'utf-8')
@@ -59,20 +89,21 @@ async function processDocs(sourceDocsPath, targetPath) {
 
     for( const resource of resources ) {
         const { resource_guid: id, name, local_id: localID, resource_type: resourceType, parent_guid: parentResource } = resource
-        if( resourceType === 'text' && parentResource === null ) {
-            const sourceFile = `resources/${id}`
-            const content = convertToHTML(sourceFile)
-            const html = pageTemplate(name,content)
-            const targetFile = `${targetPath}/${localID}.html`
-            fs.writeFileSync(targetFile, html, "utf8")    
+        if( parentResource === null ) {
+            if( resourceType === 'text' ) {
+                renderText(id, name, localID, targetPath) 
+            } else if( resourceType === 'teidoc' ) {
+                renderTEIDoc(id, name, localID, resources, targetPath)
+            }   
         }
-    }
+    }    
 }
 
 async function run() {
     dirExists('content')
-    dirExists('content/texts')
-    await processDocs('resources','content/texts')
+    dirExists('content/en')
+    dirExists('content/en/texts')
+    await processDocs('content/en/texts')
 }
 
 function main() {
