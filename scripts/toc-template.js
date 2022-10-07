@@ -6,7 +6,7 @@ const tocTemplate = function tocTemplate(links) {
     }
 
     return `---
-    title: "texts"
+    title: "TEI Documents"
 ---
     
 ${linkLines}`
