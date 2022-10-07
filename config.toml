@@ -1,4 +1,4 @@
-title = "ArchivEngine Web"
+title = "FairCopy Learn@DLF Workshop"
 baseURL = "https://gohugo-theme-ananke.pages.dev"
 languageCode = "en-us"
 theme = "github.com/theNewDynamic/gohugo-theme-ananke"
@@ -12,7 +12,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.en]
-    title = "ArchivEngine Web"
+    title = "FairCopy Learn@DLF Workshop"
     weight = 1
     contentDir = "content/en"
     # languageDirection = 'rtl' for Right-To-Left languages
