@@ -1,5 +1,5 @@
 title = "FairCopy Learn@DLF Workshop"
-baseURL = "https://gohugo-theme-ananke.pages.dev"
+baseURL = "https://faircopy-learndlf.netlify.app"
 languageCode = "en-us"
 theme = "github.com/theNewDynamic/gohugo-theme-ananke"
 resourceDir = "ananke-resources"
