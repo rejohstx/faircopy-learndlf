@@ -7,6 +7,7 @@ const { JSDOM } = jsdom
 const {CETEI} = require("./CETEI")
 const { pageTemplate } = require("./page-template")
 const { headerTemplate } = require("./header-template")
+const { tocTemplate } = require("./toc-template")
 
 function dirExists( dir ) {
     if( !fs.existsSync(dir) ) {
@@ -59,12 +60,18 @@ function renderHeader(header, targetPath) {
     fs.writeFileSync(targetFile, markdown, "utf8")        
 }
 
+function renderTOC(links, targetPath) {
+    const markdown = tocTemplate(links)
+    const targetFile = `${targetPath}/_index.md`
+    fs.writeFileSync(targetFile, markdown, "utf8")        
+}
+
 function renderTEIDoc(teiDoc, targetPath) {
     const teiDocPath = `${targetPath}/${teiDoc.id}`
     dirExists(teiDocPath)
 
     // first render the top level page
-    renderHeader(teiDoc.header, targetPath)
+    renderHeader(teiDoc.header, teiDocPath)
 
     // then render the children
     for( const resource of teiDoc.resources ) {
@@ -150,6 +157,7 @@ function parseTEIDoc(teidocID, teidocXML) {
 async function processDocs(sourcePath, targetPath) {
     clearDir(targetPath)
 
+    const tocLinks = []
     const dirContents = fs.readdirSync(sourcePath)
     for( let i=0; i < dirContents.length; i++ ) {
         const filename = dirContents[i]
@@ -159,8 +167,10 @@ async function processDocs(sourcePath, targetPath) {
             const exampleXML = fs.readFileSync(filePath, 'utf-8')
             const teiDoc = parseTEIDoc(name,exampleXML)
             renderTEIDoc(teiDoc, targetPath)
+            tocLinks.push({name, localID: name})
         }
-    }       
+    }        
+    renderTOC( tocLinks, targetPath )
 }
 
 async function run() {
