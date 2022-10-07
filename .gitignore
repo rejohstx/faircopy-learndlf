@@ -4,4 +4,3 @@ content/en/texts/**
 .netlify
 public
 .env
-resources

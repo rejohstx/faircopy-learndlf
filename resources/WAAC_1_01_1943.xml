@@ -1,0 +1,179 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader xml:id="header">
+		<fileDesc>
+			<titleStmt>
+				<title type="full">
+					<title type="main">1-01-1943 WAAC</title>
+				</title>
+				<author>
+					<persName>Ann Smith</persName>
+				</author>
+			</titleStmt>
+			<editionStmt>
+				<edition>Edition created from new transcripts of this manuscript.</edition>
+				<respStmt xml:id="AU216679">
+					<resp>Initial upload of this work's facsimile images and metadata to FromThePage for editing</resp>
+					<persName>Josie Brumfield</persName>
+				</respStmt>
+				<respStmt xml:id="OU216679">
+					<resp>Administrator of the Ann Smith Letters transcription project on FromThePage</resp>
+					<persName>Josie Brumfield</persName>
+				</respStmt>
+				<respStmt xml:id="U217849">
+					<persName>squashni</persName>
+					<resp>made 5 edits between <date type="first_edit" when="2020-03-30T19:21:11Z">March 30, 2020</date> and <date type="last_edit" when="2020-03-30T19:30:40Z">March 30, 2020</date>.</resp>
+				</respStmt>
+				<respStmt xml:id="U216679">
+					<persName>Josie Brumfield</persName>
+					<resp>made 3 edits between <date type="first_edit" when="2020-01-18T21:06:45Z">January 18, 2020</date> and <date type="last_edit" when="2020-01-18T22:53:46Z">January 18, 2020</date>.</resp>
+				</respStmt>
+				<respStmt xml:id="U4">
+					<persName>Sara Brumfield</persName>
+					<resp>made 3 edits between <date type="first_edit" when="2021-03-25T21:37:01Z">March 25, 2021</date> and <date type="last_edit" when="2021-12-01T16:34:31Z">December 1, 2021</date>.</resp>
+				</respStmt>
+				<respStmt xml:id="U216441">
+					<persName>Robin</persName>
+					<resp>made 3 edits between <date type="first_edit" when="2020-02-05T05:22:45Z">February 5, 2020</date> and <date type="last_edit" when="2020-02-05T05:25:27Z">February 5, 2020</date>.</resp>
+				</respStmt>
+			</editionStmt>
+			<publicationStmt>
+				<publisher>Dynamic TEI export from FromThePage (version 21.1)</publisher>
+				<availability>
+					<p/>
+				</availability>
+				<ref>
+					<date when="2022-10-06T13:32:33+00:00">October 6, 2022</date>
+				</ref>
+			</publicationStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<repository>Brumfield Household</repository>
+						<collection>Ann Smith Duggar Letters</collection>
+					</msIdentifier>
+					<physDesc>
+						<p/>
+					</physDesc>
+					<history>
+						<origin>
+							<placeName>Fort Des Moines, Iowa</placeName>
+						</origin>
+						<provenance/>
+					</history>
+				</msDesc>
+				<listPerson>
+					<person xml:id="S102680">
+						<persName>Emma Smith</persName>
+						<note type="categorization">Categories:<ab><ptr ana="#category #leaf #root" target="#C1527"/></ab></note>
+					</person>
+					<person xml:id="S102681">
+						<persName>Pauline Smith Carlstead</persName>
+						<note type="categorization">Categories:<ab><ptr ana="#category #leaf #root" target="#C1527"/></ab></note>
+					</person>
+				</listPerson>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation><placeName>Fort Des Moines, Iowa</placeName> <date when="1943-01-01">1943-01-01</date></creation>
+			<textClass>
+				<keywords>
+					<list>
+						<item>
+							<term type="genre">Correspondence</term>
+						</item>
+					</list>
+				</keywords>
+			</textClass>
+			<langUsage>
+				<language ident="eng">English</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange ordered="true">
+				<change target="#P705554" when="2021-12-01T16:34:31Z" who="U4" xml:id="CHG19">Version 5 of page "1": Changes to page transcript.</change>
+				<change target="#P705556" when="2021-03-25T21:38:18Z" who="U4" xml:id="CHG18">Version 5 of page "3": Changes to page transcript.</change>
+				<change target="#P705554" when="2021-03-25T21:37:01Z" who="U4" xml:id="CHG17">Version 4 of page "1": Changes to page transcript.</change>
+				<change target="#P705556" when="2020-03-30T19:30:40Z" who="U217849" xml:id="CHG14">Version 4 of page "3": Changes to page transcript.</change>
+				<change target="#P705555" when="2020-03-30T19:28:36Z" who="U217849" xml:id="CHG13">Version 5 of page "2": Changes to page transcript.</change>
+				<change target="#P705555" when="2020-03-30T19:27:44Z" who="U217849" xml:id="CHG12">Version 4 of page "2": Changes to page transcript.</change>
+				<change target="#P705554" when="2020-03-30T19:22:58Z" who="U217849" xml:id="CHG11">Version 3 of page "1": Changes to page transcript.</change>
+				<change target="#P705554" when="2020-03-30T19:21:11Z" who="U217849" xml:id="CHG10">Version 2 of page "1": Changes to page transcript.</change>
+				<change target="#P705556" when="2020-02-05T05:25:27Z" who="U216441" xml:id="CHG9">Version 3 of page "3": Changes to page transcript.</change>
+				<change target="#P705555" when="2020-02-05T05:22:52Z" who="U216441" xml:id="CHG8">Version 3 of page "2": Changes to page transcript.</change>
+				<change target="#P705555" when="2020-02-05T05:22:45Z" who="U216441" xml:id="CHG7">Version 2 of page "2": Changes to page transcript.</change>
+				<change target="#P705556" when="2020-01-18T22:53:46Z" who="U216679" xml:id="CHG6">Version 2 of page "3": Changes to page transcript.</change>
+				<change target="#P705556" when="2020-01-18T22:49:09Z" who="U216679" xml:id="CHG5">Version 1 of page "3": Empty transcript -- probably initial upload of page facsimile.</change>
+				<change target="#P705555" when="2020-01-18T22:48:33Z" who="U216679" xml:id="CHG4">Version 1 of page "2": Changes to page transcript.</change>
+				<change target="#P705554" when="2020-01-18T21:06:45Z" who="U216679" xml:id="CHG3">Version 1 of page "1": Changes to page transcript.</change>
+				<change target="#P705556" when="2020-01-18T20:12:28Z" who="U216679" xml:id="CHG2">Version 0 of page "3": Empty transcript -- probably initial upload of page facsimile.</change>
+				<change target="#P705555" when="2020-01-18T20:12:27Z" who="U216679" xml:id="CHG1">Version 0 of page "2": Empty transcript -- probably initial upload of page facsimile.</change>
+				<change target="#P705554" when="2020-01-18T20:12:27Z" who="U216679" xml:id="CHG0">Version 0 of page "1": Empty transcript -- probably initial upload of page facsimile.</change>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="transcription">
+		<body>
+			<pb facs="#f000" n="1" xml:id="F705554"/>
+			<div xml:id="OTP705554">
+				<fw type="pageNum">1</fw>
+				<opener>
+					<byline><name>Women's Army Auxiliary Corps</name><lb/> <name>Fort Des Moines, Iowa</name></byline>
+					<dateline>Sunday</dateline>
+					<salute>Dear Kids -</salute>
+				</opener>
+				<p xml:id="OTP705554P3">Thought sure I would <lb/> get a letter from you today.<lb/> But no letter. How is everyone?<lb/> It warmed up here quite a bit<lb/> this week but it has turned cold<lb/> again and is snowing today.</p>
+				<p xml:id="OTP705554P4">I fell on the ice the other<lb/> day + busted my butt + hand.<lb/> Sure did hurt but guess I'll live<lb/> over it.</p>
+				<p xml:id="OTP705554P5"><rs ref="#S102680 #emma_smith">Emma Smith</rs> is over in Bldg. 70<lb/> ready to leave for Miami, Fla. for<lb/> Airplane Warning Service. I sure<lb/> hate to see her leave.</p>
+				<p xml:id="OTP705554P6">Look for a picture most any day of<lb/> our Co. I am down in front right<lb/> hand corner. I am sending a picture</p>
+				<closer>(over)</closer>
+			</div>
+			<pb facs="#f001" n="2" xml:id="F705555"/>
+			<div xml:id="OTP705555">
+				<fw type="pageNum">2</fw>
+				<p xml:id="OTP705555P0">Women's Army Auxiliary Corps</p>
+				<p xml:id="OTP705555P1">Fort Des Moines, Iowa</p>
+				<p xml:id="OTP705555P2">I haven't heard from Al and I<lb/> haven't wrote for I've never got the<lb/> address. Please send my watch if<lb/> you never send any thing else for <lb/> I do need it.</p>
+				<p xml:id="OTP705555P3">I had a letter today from the<lb/> St. Louis Recruiting Office. I washed<lb/> yesterday + ironed today + restamped<lb/> all my clothes. Would liked to have<lb/> gone to the show but my pocket<lb/> book said no. Have been reading<lb/> all afternoon. How are the boys?<lb/> I sure would like to see them.<lb/> Don't know any news so will say<lb/> bye-bye. Write often. Love to all</p>
+				<p xml:id="OTP705555P4">Mother-</p>
+			</div>
+			<pb facs="#f002" n="3" xml:id="F705556"/>
+			<div xml:id="OTP705556">
+				<fw type="pageNum">3</fw>
+				<p xml:id="OTP705556P0">Aux. Ann Smith<lb/> Co. 2 Reg. 3<lb/> First WAAC Training Center<lb/> Fort Des Moines. Iowa.</p>
+				<p xml:id="OTP705556P1">
+					<rs ref="#S102681">Mrs. G. W. Carlstead</rs>
+				</p>
+				<p xml:id="OTP705556P2">1102 Dillon Dr.</p>
+				<p xml:id="OTP705556P3">St. Louis</p>
+				<p xml:id="OTP705556P4">Mo.</p>
+				<note resp="#U217849">Did not transcribe stamped information including date of posting (February 1, 1943)</note>
+			</div>
+		</body>
+	</text>
+	<standOff xml:id="people">
+		<listPerson>
+			<person xml:id="emma_smith">
+				<persName>Emma Smith</persName>
+			</person>
+		</listPerson>
+		<listPlace>
+			<place>
+				<placeName>Fort Des Moines, Iowa</placeName>
+			</place>
+		</listPlace>
+	</standOff>
+	<facsimile sameAs="https://fromthepage.com/iiif/21460/manifest" xml:id="images">
+		<surface xml:id="f000" ulx="0" uly="0" lrx="3000" lry="4000" sameAs="https://fromthepage.com/iiif/21460/canvas/705554">
+			<label>1</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/705554"/>
+		</surface>
+		<surface xml:id="f001" ulx="0" uly="0" lrx="3000" lry="4000" sameAs="https://fromthepage.com/iiif/21460/canvas/705555">
+			<label>2</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/705555"/>
+		</surface>
+		<surface xml:id="f002" ulx="0" uly="0" lrx="4000" lry="3000" sameAs="https://fromthepage.com/iiif/21460/canvas/705556">
+			<label>3</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/705556"/>
+		</surface>
+	</facsimile>
+</TEI>
