@@ -76,8 +76,6 @@ function renderTEIDoc(teiDoc, targetPath) {
 }
 
 function parseTEIDoc(teidocID, teidocXML) {
-    // pull out resources and create resourceMap
-    
     const xmlDom = new JSDOM(teidocXML, { contentType: "text/xml" }).window.document
 
     const teiEl = xmlDom.getElementsByTagName('tei')[0] || xmlDom.getElementsByTagName('TEI')[0]
@@ -105,7 +103,8 @@ function parseTEIDoc(teidocID, teidocXML) {
     const resources = []
     for( let i=0; i < textEls.length; i++ ) {
         const contentEl = textEls[i]
-        const localID = contentEl.getAttribute('xml:id')
+        const xmlID = contentEl.getAttribute('xml:id')
+        const localID = xmlID? xmlID : `text${i}`
         const resourceType = 'text'
         const content = contentEl.outerHTML
         const resource = { localID, resourceType, content }
@@ -113,7 +112,8 @@ function parseTEIDoc(teidocID, teidocXML) {
     }
     for( let i=0; i < standOffEls.length; i++ ) {
         const contentEl = standOffEls[i]
-        const localID = contentEl.getAttribute('xml:id')
+        const xmlID = contentEl.getAttribute('xml:id')
+        const localID = xmlID? xmlID : `standOff${i}`
         const resourceType = 'standOff'
         const content = contentEl.outerHTML
         const resource = { localID, resourceType, content }
@@ -121,7 +121,8 @@ function parseTEIDoc(teidocID, teidocXML) {
     }
     for( let i=0; i < sourceDocEls.length; i++ ) {
         const contentEl = sourceDocEls[i]
-        const localID = contentEl.getAttribute('xml:id')
+        const xmlID = contentEl.getAttribute('xml:id')
+        const localID = xmlID? xmlID : `sourceDoc${i}`
         const resourceType = 'sourceDoc'
         const content = contentEl.outerHTML
         const resource = { localID, resourceType, content }
@@ -129,7 +130,8 @@ function parseTEIDoc(teidocID, teidocXML) {
     }
     for( let i=0; i < facsEls.length; i++ ) {
         const contentEl = facsEls[i]
-        const localID = contentEl.getAttribute('xml:id')
+        const xmlID = contentEl.getAttribute('xml:id')
+        const localID = xmlID? xmlID : `facs${i}`
         const resourceType = 'facs'
         const content = contentEl.outerHTML
         const resource = { localID, resourceType, content }
@@ -145,23 +147,27 @@ function parseTEIDoc(teidocID, teidocXML) {
     return { id: teidocID, header, resources }
 }
 
-async function processDocs(targetPath) {
+async function processDocs(sourcePath, targetPath) {
     clearDir(targetPath)
 
-    // generate list of sourceFiles
-    const exampleXML = fs.readFileSync('resources/WAAC_1_01_1943.xml', 'utf-8')
-    const teiDocs = [ parseTEIDoc('WAAC_1_01_1943',exampleXML) ]
-
-    for( const teiDoc of teiDocs ) {
-        renderTEIDoc(teiDoc, targetPath)
-    }    
+    const dirContents = fs.readdirSync(sourcePath)
+    for( let i=0; i < dirContents.length; i++ ) {
+        const filename = dirContents[i]
+        if( filename.endsWith('.xml') ) {
+            const filePath = `${sourcePath}/${filename}`
+            const name = filename.split('.xml')[0]
+            const exampleXML = fs.readFileSync(filePath, 'utf-8')
+            const teiDoc = parseTEIDoc(name,exampleXML)
+            renderTEIDoc(teiDoc, targetPath)
+        }
+    }       
 }
 
 async function run() {
     dirExists('content')
     dirExists('content/en')
     dirExists('content/en/texts')
-    await processDocs('content/en/texts')
+    await processDocs('resources','content/en/texts')
 }
 
 function main() {
