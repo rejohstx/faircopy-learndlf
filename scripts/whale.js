@@ -68,8 +68,8 @@ function renderTEIDoc(teiDoc, targetPath) {
 
     // then render the children
     for( const resource of teiDoc.resources ) {
-        const { local_id: localID, resource_type: resourceType, content } = resource
-        if( resourceType === 'text' ) {
+        const { localID, resourceType, content } = resource
+        if( resourceType === 'text' || resourceType == 'standOff' ) {
             renderText(localID, content, teiDocPath)
         }
     }
@@ -105,48 +105,42 @@ function parseTEIDoc(teidocID, teidocXML) {
     const resources = []
     for( let i=0; i < textEls.length; i++ ) {
         const contentEl = textEls[i]
-        const resource_guid = `${teidocID}-text${i}`
-        const local_id = contentEl.getAttribute('xml:id')
-        const resource_type = 'text'
+        const localID = contentEl.getAttribute('xml:id')
+        const resourceType = 'text'
         const content = contentEl.outerHTML
-        const resource = { resource_guid, local_id, resource_type, content }
+        const resource = { localID, resourceType, content }
         resources.push(resource)
     }
     for( let i=0; i < standOffEls.length; i++ ) {
         const contentEl = standOffEls[i]
-        const resource_guid = `${teidocID}-sourceDoc${i}`
-        const local_id = contentEl.getAttribute('xml:id')
-        const resource_type = 'sourceDoc'
+        const localID = contentEl.getAttribute('xml:id')
+        const resourceType = 'standOff'
         const content = contentEl.outerHTML
-        const resource = { resource_guid, local_id, resource_type, content }
+        const resource = { localID, resourceType, content }
         resources.push(resource)
     }
     for( let i=0; i < sourceDocEls.length; i++ ) {
         const contentEl = sourceDocEls[i]
-        const resource_guid = `${teidocID}-standOff${i}`
-        const local_id = contentEl.getAttribute('xml:id')
-        const resource_type = 'standOff'
+        const localID = contentEl.getAttribute('xml:id')
+        const resourceType = 'sourceDoc'
         const content = contentEl.outerHTML
-        const resource = { resource_guid, local_id, resource_type, content }
+        const resource = { localID, resourceType, content }
         resources.push(resource)
     }
     for( let i=0; i < facsEls.length; i++ ) {
         const contentEl = facsEls[i]
-        const resource_guid = `${teidocID}-facs${i}`
-        const local_id = contentEl.getAttribute('xml:id')
-        const resource_type = 'facs'
+        const localID = contentEl.getAttribute('xml:id')
+        const resourceType = 'facs'
         const content = contentEl.outerHTML
-        const resource = { resource_guid, local_id, resource_type, content }
+        const resource = { localID, resourceType, content }
         resources.push(resource)
     }
 
-    const resource_guid = `${teidocID}-header`
-    const local_id = teiHeaderEl.getAttribute('xml:id')
+    const localID = teiHeaderEl.getAttribute('xml:id')
     const titleEl = teiHeaderEl.getElementsByTagName('title')[0]
-    const title = titleEl ? titleEl.innerText : 'untitled'
-    const resource_type = 'teiheader'
+    const title = titleEl ? titleEl.textContent.trim() : 'untitled'
     const content = teiHeaderEl.outerHTML
-    const header = { resource_guid, title, local_id, resource_type, content }
+    const header = { title, localID, content }
 
     return { id: teidocID, header, resources }
 }
