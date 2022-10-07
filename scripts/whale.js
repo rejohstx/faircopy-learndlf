@@ -167,9 +167,21 @@ async function processDocs(sourcePath, targetPath) {
             const exampleXML = fs.readFileSync(filePath, 'utf-8')
             const teiDoc = parseTEIDoc(name,exampleXML)
             renderTEIDoc(teiDoc, targetPath)
-            tocLinks.push({name, localID: name})
+            tocLinks.push({name: teiDoc.header.title, localID: name})
         }
-    }        
+    }      
+    
+    tocLinks.sort( (a,b) => { 
+        const nameA = a.name.toUpperCase()
+        const nameB = b.name.toUpperCase()
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+    })
+
     renderTOC( tocLinks, targetPath )
 }
 
