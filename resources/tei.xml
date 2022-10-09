@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_all.xsd"
+xml:lang="EN"
+xml:id="export">
+
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title type="full">
+        <title type="main">11-20-1943 WAAC</title>
+        <title type="desc"></title>
+      </title>
+      <author>
+        <persName></persName>
+      </author>
+    </titleStmt>
+
+    <editionStmt>
+      <edition>Edition created from new transcripts of this manuscript.</edition>
+      <respStmt xml:id="AU216679">
+        <resp>Initial upload of this work&#39;s facsimile images and metadata to FromThePage for editing</resp>
+        <persName>Josie Brumfield</persName>
+      </respStmt>
+
+      <respStmt xml:id="OU216679">
+        <resp>Administrator of the Ann Smith Letters transcription project on FromThePage</resp>
+        <persName>Josie Brumfield</persName>
+      </respStmt>
+
+        <respStmt xml:id="U31858">
+          <persName>Bilabial</persName>
+            <resp>
+              made 5 edits between
+              <date type="first_edit" when="2020-02-09T16:05:32Z">February  9, 2020</date> and
+              <date type="last_edit" when="2020-02-09T16:14:07Z">February  9, 2020</date>.
+            </resp>
+        </respStmt>
+        <respStmt xml:id="U217894">
+          <persName>mimistach</persName>
+            <resp>
+              made 2 edits between
+              <date type="first_edit" when="2020-06-22T17:07:37Z">June 22, 2020</date> and
+              <date type="last_edit" when="2020-06-22T17:07:42Z">June 22, 2020</date>.
+            </resp>
+        </respStmt>
+        <respStmt xml:id="U4">
+          <persName>Sara Brumfield</persName>
+            <resp>
+              made one edit on
+              <date type="only_edit" when="2021-08-30T14:34:01Z">August 30, 2021</date>.
+            </resp>
+        </respStmt>
+
+
+
+    </editionStmt>
+
+    <publicationStmt>
+    <publisher>Dynamic TEI export from FromThePage (version 21.1)</publisher>
+      <availability>
+        <p></p>
+      </availability>
+      <date when="2022-10-09T14:05:40+00:00">October  9, 2022</date>
+    </publicationStmt>
+
+    <sourceDesc>
+      <msDesc>
+        <msIdentifier>
+            <collection>Ann Smith Letters</collection>
+        </msIdentifier>
+        <physDesc>
+          <p></p>
+        </physDesc>
+        <history>
+          <origin>
+            <placeName></placeName>
+          </origin>
+          <provenance></provenance>
+        </history>
+      </msDesc>
+
+
+    </sourceDesc>
+
+  </fileDesc>
+
+
+
+  <profileDesc>
+  
+
+
+      <langUsage>
+        <language ident="eng">English</language>
+      </langUsage>
+  </profileDesc>
+
+  <revisionDesc>
+    <listChange ordered="true">
+        <change xml:id="CHG11" who="U4" when="2021-08-30T14:34:01Z" target="#P705589">
+          Version 3 of page "4":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG10" who="U217894" when="2020-06-22T17:07:42Z" target="#P705587">
+          Version 3 of page "2":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG9" who="U217894" when="2020-06-22T17:07:37Z" target="#P705587">
+          Version 2 of page "2":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG8" who="U31858" when="2020-02-09T16:14:07Z" target="#P705589">
+          Version 2 of page "4":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG7" who="U31858" when="2020-02-09T16:14:01Z" target="#P705589">
+          Version 1 of page "4":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG6" who="U31858" when="2020-02-09T16:09:42Z" target="#P705588">
+          Version 1 of page "3":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG5" who="U31858" when="2020-02-09T16:07:24Z" target="#P705587">
+          Version 1 of page "2":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG4" who="U31858" when="2020-02-09T16:05:32Z" target="#P705586">
+          Version 1 of page "1":
+            Changes to page transcript.
+        </change>
+        <change xml:id="CHG3" who="U216679" when="2020-01-18T20:12:53Z" target="#P705589">
+          Version 0 of page "4":
+            Empty transcript -- probably initial upload of page facsimile.
+        </change>
+        <change xml:id="CHG2" who="U216679" when="2020-01-18T20:12:52Z" target="#P705588">
+          Version 0 of page "3":
+            Empty transcript -- probably initial upload of page facsimile.
+        </change>
+        <change xml:id="CHG1" who="U216679" when="2020-01-18T20:12:51Z" target="#P705587">
+          Version 0 of page "2":
+            Empty transcript -- probably initial upload of page facsimile.
+        </change>
+        <change xml:id="CHG0" who="U216679" when="2020-01-18T20:12:51Z" target="#P705586">
+          Version 0 of page "1":
+            Empty transcript -- probably initial upload of page facsimile.
+        </change>
+    </listChange>
+  </revisionDesc>
+</teiHeader>
+
+<text>
+  <body>
+        <pb xml:id="F705586" n="1" facs="https://fromthepage.com/image-service/705586/full/full/0/native.jpg"/>
+        <div xml:id="OTP705586">
+        <fw type="pageNum">1</fw>
+        <p xml:id='OTP705586P0'>S/Sgt Ann Smitth<lb/>
+A-700-158 - WAC DeT<lb/>
+Hunter Field GA
+</p>
+
+<p xml:id='OTP705586P1'>[Postmark] SAVANNAH GA NOV 20 [?] 1943
+</p>
+
+<p xml:id='OTP705586P2'>Mrs. G. W. Carlstead<lb/>
+431 Alleghany<lb/>
+Vallejo<lb/>
+California
+</p>
+
+
+        </div>
+        <pb xml:id="F705587" n="2" facs="https://fromthepage.com/image-service/705587/full/full/0/native.jpg"/>
+        <div xml:id="OTP705587">
+        <fw type="pageNum">2</fw>
+        <p xml:id='OTP705587P0'><lb/>
+Greetings from the Sunny South
+</p>
+
+<p xml:id='OTP705587P1'>They will never go hungry. I just<lb/>
+weight 150 lbs. now. Soon will be<lb/>
+ready to butcher. I don't care how<lb/>
+much I weaight as long as I feel good. <lb/>
+How are the boys + what are <lb/>
+they doing? I sure wish I could<lb/>
+see them. <lb/>
+Well I guess I had better get <lb/>
+to work because I have to go to<lb/>
+town this afternoon for the laundry<lb/>
+shos + dry cleaning. Write often.
+</p>
+
+<p xml:id='OTP705587P2'>Love<lb/>
+Mother
+</p>
+
+
+        </div>
+        <pb xml:id="F705588" n="3" facs="https://fromthepage.com/image-service/705588/full/full/0/native.jpg"/>
+        <div xml:id="OTP705588">
+        <fw type="pageNum">3</fw>
+        <p xml:id='OTP705588P0'>Greetings from the Sunny South
+</p>
+
+<p xml:id='OTP705588P1'>Saturday<lb/>
+Dear Kids -
+</p>
+
+<p xml:id='OTP705588P2'>Received your letter yesterday<lb/>
+with the cartoons. The kids get a <lb/>
+big kick out of them. Things like<lb/>
+that always go the rounds. Am sending <lb/>
+you a sample of poems. I think they<lb/>
+are cute. I just have two cards now. <lb/>
+I think I have thrown all the <lb/>
+others away.  I had one from North<lb/>
+Africa + also one from England. But<lb/>
+Can't seem to find them this a.m.<lb/>
+The next letter I get from them I'll <lb/>
+send  save and send to you<lb/>
+(over)
+</p>
+
+
+        </div>
+        <pb xml:id="F705589" n="4" facs="https://fromthepage.com/image-service/705589/full/full/0/native.jpg"/>
+        <div xml:id="OTP705589">
+        <fw type="pageNum">4</fw>
+        <p xml:id='OTP705589P0'>I'll never get into trouble getting things <lb/>
+for G. W. I get them at classification<lb/>
+warehouses. I'll see what I can do<lb/>
+about shirts. What size does he wear?<lb/>
+Sunday night will be the formal opening<lb/>
+of our day room. Thursday is<lb/>
+Thanksgiving and we have invited all<lb/>
+200 soldiers that are living in the<lb/>
+city to come over + have dinner.<lb/>
+I don't know what we will do Xmas.<lb/>
+I am invited over to Q.M. (Quartermaster)<lb/>
+Co. to eat Dinner Thanksgiving + Xmas.<lb/>
+So it looks as if I'll get plenty to <lb/>
+eat. That is sure one thing I can <lb/>
+say. We always have plenty to eat. <lb/>
+This morning we had toast, eggs,<lb/>
+grapefruit, breakfast food. coffee. jelly<lb/>
+for breakfast. Heaving fried chicken<lb/>
+for dinner because I know for I <lb/>
+have already been over to the mess<lb/>
+hall for a chicken leg. If a person <lb/>
+stays on the good side of the cooks
+</p>
+
+
+        </div>
+  </body>
+</text>
+</TEI>
